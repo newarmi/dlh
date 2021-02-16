@@ -543,7 +543,6 @@ textarea {
 
 html {
   font-size: 10px;
-  font-size: 5px;
 }
 
 body {
@@ -1154,7 +1153,8 @@ a {
 }
 
 .main-video__title {
-  font-size: 25px;
+  font-size: 50px;
+  font-weight: 900;
   color: #fff;
   letter-spacing: 1.5px;
   -webkit-transition: opacity 0.8s ease-out 0s;
@@ -1292,7 +1292,8 @@ a {
 }
 
 .delivery {
-  padding-top: 400px;
+  padding-top: 300px;
+  padding-bottom: 100px;
 }
 
 .delivery-content {
@@ -1560,6 +1561,82 @@ a {
   overflow: hidden;
 }
 
+.conclusion {
+  background: #fff;
+}
+
+.conclusion__bg {
+  background: #ba0000;
+  padding: 100px 0;
+}
+
+.conclusion-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-block {
+  max-width: 740px;
+}
+
+.text-block__title_conteiner {
+  margin-bottom: 40px;
+}
+
+.text-block__title {
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 0.9px;
+  font-weight: 700;
+}
+
+.text-block__text {
+  font-size: 16px;
+  letter-spacing: 0.48px;
+  color: #fff;
+  font-weight: 200;
+}
+
+.conclusion-content__link-block {
+  margin-top: 30px;
+}
+
+.link-block {
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  background: #a00000;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.link-block span {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: #fff;
+  font-weight: 700;
+}
+
 @media (min-width: 450px) {
   .title {
     font-size: 5.71em;
@@ -1701,10 +1778,6 @@ a {
   .main-video__title_conteiner {
     padding-top: 21vh;
   }
-
-  .main-video__title {
-    font-size: 2.53vw;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1715,6 +1788,12 @@ a {
 
 @media (min-width: 880px) {
   .list__item:last-child {
+    margin: 0;
+  }
+}
+
+@media (min-width: 950) {
+  .conclusion-content__link-block {
     margin: 0;
   }
 }
@@ -1752,6 +1831,12 @@ a {
 
   .fullscreen {
     min-height: calc(100vh - 170px);
+  }
+
+  .link-block:hover {
+    background: #ba0000;
+    -webkit-box-shadow: 0px 0 10px 10px #a00000;
+            box-shadow: 0px 0 10px 10px #a00000;
   }
 }
 
