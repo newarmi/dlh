@@ -1563,11 +1563,26 @@ a {
 
 .conclusion {
   background: #fff;
+  overflow: hidden;
 }
 
 .conclusion__bg {
   background: #ba0000;
   padding: 100px 0;
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  -webkit-transition: -webkit-transform .8s ease-out;
+  transition: -webkit-transform .8s ease-out;
+  -o-transition: transform .8s ease-out;
+  transition: transform .8s ease-out;
+  transition: transform .8s ease-out, -webkit-transform .8s ease-out;
+}
+
+._active-scroll.conclusion__bg {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .conclusion-content {
@@ -1604,6 +1619,7 @@ a {
   letter-spacing: 0.48px;
   color: #fff;
   font-weight: 200;
+  line-height: 1.5;
 }
 
 .conclusion-content__link-block {
