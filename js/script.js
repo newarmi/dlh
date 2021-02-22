@@ -14,7 +14,6 @@ document.querySelectorAll('.tabs__item').forEach((itemTabs) =>
 );
 document.querySelector('.tabs__item').click();
 
-
 const animItems = document.querySelectorAll('._anim-items'); 
 // обявляем в переменнужю все элеменные с классом
 if (animItems.length > 0){
@@ -90,19 +89,22 @@ const swiper = new Swiper('.swiper-container', {
 });
 
 document.querySelectorAll('.select').forEach((item) =>
-	item.addEventListener('click', function (v) {
-		// document.querySelectorAll('.select').forEach((c) => 
-		// 	c.classList.remove('select--active'),
-		// );
-		item.classList.toggle('select--active')
-	})
+   item.addEventListener('click', function (v) {
+      // document.querySelectorAll('.select').forEach((c) => 
+      // 	c.classList.remove('select--active'),
+      // );
+      item.classList.toggle('select--active')
+   })
 );
 
 
-document.querySelector(".bottom__burger").addEventListener("click", (e) => {
-	let box = document.querySelector(".bottom__burger");
-	box.classList.toggle("active_burger-icon");
+document.querySelector(".bottom__burger").addEventListener("click", () => {
 
-	let nav = document.querySelector(".bottom__nav");
-	nav.classList.toggle("active_burger");
-});
+	document.querySelector(".bottom__burger").classList.toggle("active_burger");
+
+	document.querySelector(".top").classList.toggle("active_burger");
+
+	document.querySelector(".bottom__nav").classList.toggle("active_burger");
+
+	document.querySelector("body").classList.toggle("lock");
+}); 
