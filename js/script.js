@@ -107,4 +107,6 @@ document.querySelector(".bottom__burger").addEventListener("click", () => {
 	document.querySelector(".bottom__nav").classList.toggle("active_burger");
 
 	document.querySelector("body").classList.toggle("lock");
-}); 
+});
+
+ 
