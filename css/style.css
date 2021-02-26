@@ -1699,6 +1699,146 @@ a {
   height: auto;
 }
 
+.footer_wrapper {
+  max-width: 1920px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer__img-left-conteiner {
+  display: none;
+  position: relative;
+  height: 311px;
+  width: 100%;
+  max-width: 427px;
+}
+
+.footer__img-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.footer-content__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 853px;
+  padding: 0px 30px 0px 30px;
+}
+
+.footer-content__col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 30px 20px 0px 0px;
+}
+
+.footer-content__col:last-child {
+  margin-right: 0;
+}
+
+.footer-content__title {
+  display: inline-block;
+  margin: 0px 0px 20px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #ba0000;
+  text-transform: uppercase;
+}
+
+._title-social {
+  display: none;
+}
+
+.footer-content-list li {
+  margin: 0px 0px 10px 0px;
+}
+
+.footer-content-list li a {
+  font-size: 14px;
+  letter-spacing: 0.42px;
+  color: #777777;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.footer-content-list li i {
+  color: #ba0000;
+  margin: 0px 3px 0px 0px;
+}
+
+.footer-content-list li:first-child a {
+  color: #ffcc00;
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.social-media li a .footer-ico-link,
+.social-media li a span {
+  display: none;
+}
+
+.icon-social {
+  color: #777777;
+  font-size: 30px;
+}
+
+.footer__img-right-conteiner {
+  display: none;
+  position: relative;
+  height: 311px;
+  width: 100%;
+  max-width: 415px;
+}
+
+.footer__img-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (min-width: 411px) {
   .top__link_right span {
     display: inline;
@@ -1896,6 +2036,56 @@ a {
   .company {
     padding: 30px 0;
   }
+
+  .footer__img-left-conteiner {
+    display: block;
+  }
+
+  .footer-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+
+  .footer-content__row {
+    max-width: 853px;
+    padding: 0px 60px 0px 60px;
+  }
+
+  .footer-content__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+
+  .footer-content__title {
+    margin: 0px 0px 40px 0px;
+  }
+
+  ._title-social {
+    display: inline-block;
+  }
+
+  .social-media {
+    display: block;
+  }
+
+  .social-media li a .footer-ico-link,
+  .social-media li a span {
+    display: inline;
+  }
+
+  .social-media li:first-child a {
+    color: #017edf;
+  }
+
+  .icon-social {
+    display: none;
+  }
+
+  .footer__img-right-conteiner {
+    display: block;
+  }
 }
 
 @media (min-width: 845px) {
@@ -1946,12 +2136,6 @@ a {
   }
 }
 
-@media (min-width: 950px) {
-  .conclusion-content__link-block {
-    margin: 0;
-  }
-}
-
 @media (min-width: 960px) {
   .list__item {
     border: 2px solid #fff;
@@ -1994,6 +2178,12 @@ a {
   }
 }
 
+@media (min-width: 967px) {
+  .conclusion-content__link-block {
+    margin: 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .bottom__nav ul li:hover {
     font-weight: 900;
@@ -2022,6 +2212,14 @@ a {
 
   .company {
     padding: 70px 0;
+  }
+
+  .footer-content-list li a:hover {
+    color: #ffcc00;
+  }
+
+  .social-media li a:hover {
+    color: #017edf;
   }
 }
 
