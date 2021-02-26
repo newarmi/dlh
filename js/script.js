@@ -14,9 +14,9 @@ document.querySelectorAll('.tabs__item').forEach((itemTabs) =>
 );
 document.querySelector('.tabs__item').click();
 
-const animItems = document.querySelectorAll('._anim-items'); 
+const animItems = document.querySelectorAll('._anim-items');
 // обявляем в переменнужю все элеменные с классом
-if (animItems.length > 0){
+if (animItems.length > 0) {
 	// проверяем есть ли эти элементы
 	window.addEventListener('scroll', animOnScroll);
 	function animOnScroll(params) {
@@ -28,24 +28,24 @@ if (animItems.length > 0){
 
 			let animItemsPoint = window.innerHeight - animItemHieght / animStart;
 
-			if(animItemHieght > window.innerHeight) {
+			if (animItemHieght > window.innerHeight) {
 				animItemsPoint = window.innerHeight - window.innerHeight / animStart;
 			}
-			if((pageYOffset > animItemOffset - animItemsPoint) && pageYOffset < (animItemOffset + animItemHieght)){
+			if ((pageYOffset > animItemOffset - animItemsPoint) && pageYOffset < (animItemOffset + animItemHieght)) {
 				animItem.classList.add('_active-scroll');
 			}
-			else{
-				if(!animItem.classList.contains('anim-no-hight')){
+			else {
+				if (!animItem.classList.contains('anim-no-hight')) {
 					animItem.classList.remove('_active-scroll');
 				}
 			}
 		}
 	}
 	function offset(el) {
-		const rect = el .getBoundingClientRect(),
+		const rect = el.getBoundingClientRect(),
 			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
 			scrollTop = window.pageYOffset || document.documentElement.scrollLeft;
-		return{top: rect.top + scrollTop, left:  rect.left + scrollLeft}
+		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 	}
 	animOnScroll()
 }
